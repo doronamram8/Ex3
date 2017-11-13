@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btplus" type="id" />
+    <item name="btMinus" type="id" />
+    <item name="btDiv1" type="id" />
+    <item name="btMu" type="id" />
+    <item name="btMulti" type="id" />
+    <item name="editText" type="id" />
+    <item name="editText2" type="id" />
+    <item name="textView3" type="id" />
+</resources>
