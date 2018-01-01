@@ -1,13 +1,16 @@
 package com.example.madaim.ex3;
 
-import android.support.v7.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity implements View.OnClickListener {
     public Button plus;
     public Button minus;
     public Button mul;
@@ -20,10 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ziki();
-    }
-
-    private void ziki() {
         plus=(Button)findViewById(R.id.btplus);
         minus=(Button)findViewById(R.id.btMinus);
         div=(Button)findViewById(R.id.btDiv1);
@@ -33,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         result=(TextView)findViewById(R.id.textView3);
         plus.setOnClickListener((View.OnClickListener) this);
         minus.setOnClickListener((View.OnClickListener) this);
-        div.setOnClickListener((View.OnClickListener) this);
         mul.setOnClickListener((View.OnClickListener) this);
+        div.setOnClickListener((View.OnClickListener) this);
+
 
 
 
@@ -70,7 +70,28 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    private class Mywatcher implements TextWatcher {
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            if(s.length()==0)
+                plus.setEnabled(false);
+                minus.setEnabled(false);
+                mul.setEnabled(false);
+                div.setEnabled(false);
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    }
+
 }
-
-
 

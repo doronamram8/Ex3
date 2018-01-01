@@ -52,7 +52,9 @@
         android:text="@string/btminus"
         android:layout_alignBaseline="@+id/btMinus"
         android:layout_alignBottom="@+id/btMinus"
-        android:layout_toStartOf="@+id/editText2" />
+        android:layout_toStartOf="@+id/editText2"
+        android:enabled="false"
+         />
     <Button
         android:id="@+id/btMinus"
         android:layout_width="50dp"
@@ -61,7 +63,11 @@
         android:layout_marginTop="48dp"
         android:layout_marginStart="14dp"
         android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignStart="@+id/textView"
+        android:enabled="false"
+
+
+        />
     <Button
         android:id="@+id/btMulti"
         android:layout_width="50dp"
@@ -69,7 +75,11 @@
         android:text="@string/btdiv"
         android:layout_alignBaseline="@+id/btDiv1"
         android:layout_alignBottom="@+id/btDiv1"
-        android:layout_toEndOf="@+id/editText" />
+        android:layout_toEndOf="@+id/editText"
+        android:enabled="false"
+
+
+        />
     <Button
         android:id="@+id/btDiv1"
         android:layout_width="50dp"
@@ -78,16 +88,20 @@
         android:layout_alignBaseline="@+id/btPlus"
         android:layout_alignBottom="@+id/btPlus"
         android:layout_alignStart="@+id/editText"
-        android:layout_marginStart="33dp" />
+        android:layout_marginStart="33dp"
+        android:enabled="false"
 
-    <view
+
+        />
+
+    <View
         android:layout_width="300dp"
         android:layout_height="5dp"
         android:layout_marginTop="21dp"
         android:layout_below="@+id/editText2"
         android:layout_alignStart="@+id/btMinus"
         android:background="@drawable/border"
-        android:id="@+id/view" />
+        android:id="@+id/View" />
 
     <TextView
         android:id="@+id/textView2"
@@ -97,7 +111,7 @@
         android:textStyle="bold"
         android:textSize="50dp"
         android:layout_marginTop="18dp"
-        android:layout_below="@+id/view"
+        android:layout_below="@+id/View"
         android:layout_toStartOf="@+id/btPlus"
         />
 
