@@ -79,12 +79,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if(s.length()==0)
+            if(first.getText().length()==0||seccond.getText().length()==0) {
                 plus.setEnabled(false);
                 minus.setEnabled(false);
                 mul.setEnabled(false);
                 div.setEnabled(false);
-
+            }
+                else{
+                plus.setEnabled(true);
+                minus.setEnabled(true);
+                mul.setEnabled(true);
+                div.setEnabled(true);
+            }
         }
 
         @Override
